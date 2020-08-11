@@ -1,8 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 html{
     box-sizing: border-box;
+    padding: 0;
 }
 
 body{
     margin: 0;
     min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    rgba(255, 255, 255, 1);
+    font-family: 'Poiret One', cursive;
+
 }
+/* Video Background */
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+  }
+  
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .video-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+
+  .container{
+    min-width: 300px;
+    min-height: 250px;
+    text-align: center;
+    color: rgb(0, 0, 0, 0.8);
+    margin: 0 auto;
+    padding: 25px 25px 25px ;
+    border-radius: 5px;
+    z-index: 5;
+    display: flex;
+    background: rgba(207, 207, 207, 0.4);
+  }
+
+  .list-container {
+   text-decoration: none;
+   list-style-type: none;
+   text-align: center;
+   position: relative;
+   text-transform: uppercase;
+   padding: 10px 100px 10px;
+  }
+
+  .citylocation{
+    position: relative;
+    top: 150px;
+    font-size: 3em;
+    font-weight: 900;
+  }
+
+  .temperature-description{
+    position: relative;
+    bottom: 100px;
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  .temperature-degree{
+    position: relative;
+    font-size: 1.8em;
+    top: 15px;
+    font-weight: 800;
+
+  }
+
+
+
+@media screen and (max-width: 600px) {
+    .video-background {
+      height: 100vh;
+      width: 100vw;
+    }
+  
+    video {
+      object-fit: cover;
+      object-position: 70%;
+      margin-top: -1px;
+    }
+  
+    .container {
+      min-width: unset;
+      width: 100vw;
+      min-height: 245px;
+      padding: 20px;
+      margin: 10px;
+    }
+  
